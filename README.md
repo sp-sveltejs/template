@@ -76,10 +76,6 @@ If you're building a single-page app (SPA) with multiple routes, sirv needs to b
 "start": "sirv public --single"
 ```
 
-## Authors
-
-* [Kayode Bristol](https://github.com/kayodebristol) 
-
 ## Acknowledgments
 Special thanks to
 * [Rich Harris](https://github.com/Rich-Harris)
