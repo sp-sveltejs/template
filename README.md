@@ -78,7 +78,7 @@ If you're building a single-page app (SPA) with multiple routes, sirv needs to b
 
 ## Authors
 
-* **Kayode Bristol** 
+* [Kayode Bristol](https://github.com/kayodebristol) 
 
 ## Acknowledgments
 Special thanks to
