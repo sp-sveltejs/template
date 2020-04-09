@@ -1,9 +1,8 @@
+# sp-svelte app
 Opinionated SharePoint starter template for [sveltejs](https://github.com/sveltejs) client-side Javascript development. 
 This project uses [parcel](https://github.com/parcel-bundler/parcel), [sp-rest-proxy](https://github.com/koltyakov/sp-rest-proxy), [@pnp/sp](https://pnp.github.io/pnpjs/sp/), and [babel](https://github.com/babel/babel), among other packages. 
 
 Although your code with work with most modern browsers, the project was designed specifically to work on IE 10, as SharePoint's default masterpage still targets IE 10 with a meta tag.  
-
-# sp-svelte app
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sp-sveltejs/template.
 
