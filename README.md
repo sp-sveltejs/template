@@ -36,14 +36,14 @@ cd sp-svelte-app
 npm install
 ```
 
-* Execute, 
+Configure sp-rest-proxy 
 ````
 npm run proxy
 ```` 
 then answer the interactive questions to configure the proxy connection to your SharePoint site. Ctrl-c to end task.
 Recommend selecting On-Demand Credentials for the authentication strategy. 
 
-* Execute, 
+Start development 
 ````
 npm run dev 
 ````
