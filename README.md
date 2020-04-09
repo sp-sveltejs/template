@@ -82,5 +82,5 @@ If you're building a single-page app (SPA) with multiple routes, sirv needs to b
 
 ## Acknowledgments
 Special thanks to
-1. [Rich Harris](https://github.com/Rich-Harris)
-2. [Andrew Koltyakov](https://github.com/koltyakov)
+* [Rich Harris](https://github.com/Rich-Harris)
+* [Andrew Koltyakov](https://github.com/koltyakov)
