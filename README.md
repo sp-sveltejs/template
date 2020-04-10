@@ -25,7 +25,7 @@ cd sp-svelte-app
 
 Requires [Node.js](https://nodejs.org/)
 It's very helpful if you have access to SharePoint, since this is a SharePoint development starter kit template.
-The generated project will work with SharePoint 2013, SharePoint 2016, and SharePoint Online. 
+The generated project will work with SharePoint 2013, SharePoint 2016, SharePoint 2019, and SharePoint Online. 
 
 ## Getting started
 
