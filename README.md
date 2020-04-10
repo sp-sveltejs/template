@@ -40,8 +40,8 @@ Configure sp-rest-proxy
 ````
 npm run proxy
 ```` 
-then answer the interactive questions to configure the proxy connection to your SharePoint site. Ctrl-c to end task.
-Recommend selecting On-Demand Credentials for the authentication strategy. 
+then answer the interactive questions to configure the proxy connection to your SharePoint site. Recommend selecting On-Demand Credentials for the authentication strategy. 
+Ctrl-c to end task.
 
 Start development 
 ````
