@@ -1,6 +1,6 @@
 # sp-svelte app
-Opinionated SharePoint starter template for [sveltejs](https://github.com/sveltejs) client-side Javascript development. 
-This project uses [sveltejs](https://github.com/sveltejs), [rollup](https://github.com/rollup), [sp-rest-proxy](https://github.com/koltyakov/sp-rest-proxy), [@pnp/sp](https://pnp.github.io/pnpjs/sp/), and [babel](https://github.com/babel/babel), among other packages. 
+Opinionated SharePoint starter template for [sveltejs](https://github.com/sveltejs) client-side Javascript development.
+This project uses [sveltejs](https://github.com/sveltejs), [rollup](https://github.com/rollup), [sp-rest-proxy](https://github.com/koltyakov/sp-rest-proxy), [@pnp/sp](https://pnp.github.io/pnpjs/sp/), and [babel](https://github.com/babel/babel), among other packages.
 
 Although your code will work with most modern browsers, the project was designed specifically to work on IE 10, as SharePoint's default masterpage still targets IE 10 with a meta tag.  
 
@@ -15,13 +15,11 @@ cd sp-svelte-app
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
-
-*Looking for a shareable component template the works with SharePoint? Coming Soon*
+*Looking for a shareable component template the works with SharePoint? Coming Soon...*
 
 ---
 
-
-### Prerequisites
+## Prerequisites
 
 Requires [Node.js](https://nodejs.org/)
 It's very helpful if you have access to SharePoint, since this is a SharePoint development starter kit template.
@@ -36,28 +34,27 @@ cd sp-svelte-app
 npm install
 ```
 
-Configure sp-rest-proxy 
+Configure sp-rest-proxy
 ````
 npm run proxy
 ```` 
-then answer the interactive questions to configure the proxy connection to your SharePoint site. Recommend selecting On-Demand Credentials for the authentication strategy. 
+then answer the interactive questions to configure the proxy connection to your SharePoint site. Recommend selecting On-Demand Credentials for the authentication strategy.
 Ctrl-c to end task.
 
-Start development 
+Start development
 ````
-npm run dev 
+npm run dev
 ````
-(uses concurrently), to start the proxy and dev server simultaneously
+Uses concurrently, to start the proxy and dev server simultaneously.
 * Develop interactively, with real SharePoint data. Enjoy!
 
 Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
 
 By default, the server will only respond to requests from localhost. To allow connections from other computers, edit the `sirv` commands in package.json to include the option `--host 0.0.0.0`.
 
-
 ## Building and running in production mode
 
-To create an optimised version of the app:
+To create an optimized version of the app:
 
 ```bash
 npm run build
