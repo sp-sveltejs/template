@@ -27,8 +27,8 @@ export let getData = async (config)=>{
     });
     
     //PnPjs fetch example
-    let data = await sp.web.select("Title", "Description").get()
-    Logger.debug(data); 
+    let data = await sp.web.select("Title", "Description").get();
+    Logger.debug({data}); 
     return data; 
 
-}
+};

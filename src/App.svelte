@@ -1,30 +1,24 @@
-<script>
-	import {config} from './config';
-	import {getData} from './getData';
-	import {onMount} from 'svelte'; 
-	
-	let data = []; 
+<script lang="ts">
+	import { config } from "./config";
+	import { getData } from "./getData";
+	import { onMount } from "svelte";
 
+	type siteInfo = {
+		Title?: string;
+		Description?: string;
+	};
+	let data: siteInfo;
+	$: output = data;
 	//Uses the sveltejs lifecycle event to get data on application mount
-	onMount(async()=>{
-		data = getData(config); 
-	})
+	onMount(async () => {
+		data = await getData(config);
+
+		console.log(data);
+	});
 </script>
 
-<main>
-	<h1>SharePoint svelte Template</h1>
-	{#await data}
-	<p>...Getting Data</p>
-	{:then data}
-	<h2> Data Source via PnPjs</h2>
-	<p>SharePoint Site Title: {data.Title}</p>
-	<p>SharePoint Site Description: {data.Description}</p>
-	{/await}
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
 <style>
-	main {
+	* {
 		text-align: center;
 		padding: 1em;
 		max-width: 240px;
@@ -45,3 +39,15 @@
 	}
 </style>
 
+<h1>SharePoint svelte Template</h1>
+
+<h2>Data Source via PnPjs</h2>
+{#if output}
+	<p>Raw Data: {JSON.stringify(output)}</p>
+
+	<p>SharePoint Site Title: {output.Title}</p>
+	<p>SharePoint Site Description: {output.Description}</p>
+{/if}
+Visit the
+<a href="https://svelte.dev/tutorial">Svelte tutorial</a>
+to learn how to build Svelte apps.

@@ -7,11 +7,13 @@ import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
 import jscc from 'rollup-plugin-jscc';
 import sourcemap from 'rollup-plugin-sourcemaps';
+import autoPreprocess from 'svelte-preprocess';
+import typescript from '@rollup/plugin-typescript';
 
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-	input: 'src/main.js',
+	input: 'src/main.ts',
 	output: {
 		sourcemap: true,
 		format: 'iife',
@@ -29,6 +31,8 @@ export default {
 		sourcemap(),
 		css({ output: 'public/build/bundle.css' }),
 		svelte({
+			preprocess: autoPreprocess(),
+			extensions: ['.svelte'],
 			// enable run-time checks when not in production
 			dev: !production,
 			// we'll extract any component CSS out into
@@ -37,6 +41,7 @@ export default {
 				css.write('public/build/bundle.css');
 			}
 		}),
+		typescript({ sourceMap: !production }),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
@@ -49,14 +54,14 @@ export default {
 		}),
 		commonjs(),
 		babel({
-			extensions: [ '.js', '.mjs', '.html', '.svelte' ],
+			extensions: [ '.js', '.mjs', '.html', '.svelte', 'es', 'umd' ],
 			runtimeHelpers: true,
-			exclude: [ 'node_modules/core-js/**' ],
+			exclude: [/node_modules\/(core-js)/ ] ,
 			presets: [
 				[
 					'@babel/preset-env',
 					{
-						targets: '> 0.25%, IE 10',
+						targets: 'IE 11',
 						useBuiltIns: 'usage',
 						corejs: 3
 					}
@@ -67,7 +72,8 @@ export default {
 				[
 					'@babel/plugin-transform-runtime',
 					{
-						useESModules: true
+						corejs: 3,
+                     
 					}
 				]
 			]
