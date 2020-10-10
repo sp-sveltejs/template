@@ -2,18 +2,17 @@
 	import { config } from "./config";
 	import { getData } from "./getData";
 	import { onMount } from "svelte";
+	import { fade } from "svelte/transition";
 
 	type siteInfo = {
 		Title?: string;
 		Description?: string;
 	};
 	let data: siteInfo;
-	$: output = data;
+
 	//Uses the sveltejs lifecycle event to get data on application mount
 	onMount(async () => {
 		data = await getData(config);
-
-		console.log(data);
 	});
 </script>
 
@@ -33,7 +32,7 @@
 	}
 
 	@media (min-width: 640px) {
-		main {
+		* {
 			max-width: none;
 		}
 	}
@@ -42,11 +41,14 @@
 <h1>SharePoint svelte Template</h1>
 
 <h2>Data Source via PnPjs</h2>
-{#if output}
-	<p>Raw Data: {JSON.stringify(output)}</p>
-
-	<p>SharePoint Site Title: {output.Title}</p>
-	<p>SharePoint Site Description: {output.Description}</p>
+{#if data}
+	<div in:fade="{{delay: 0, duration: 2000}}">
+		<p>Raw Data: {JSON.stringify(data)}</p>
+		<p>SharePoint Site Title: {data.Title}</p>
+		<p>SharePoint Site Description: {data.Description}</p>
+	</div>
+{:else}
+	<p >loading...</p>
 {/if}
 Visit the
 <a href="https://svelte.dev/tutorial">Svelte tutorial</a>
