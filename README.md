@@ -2,7 +2,7 @@
 Opinionated SharePoint starter template for [sveltejs](https://github.com/sveltejs) client-side JavaScript development.
 This project uses [sveltejs](https://github.com/sveltejs), [rollup](https://github.com/rollup), [sp-rest-proxy](https://github.com/koltyakov/sp-rest-proxy), [@pnp/sp](https://pnp.github.io/pnpjs/sp/), and [babel](https://github.com/babel/babel), among other packages.
 
-Although your code will work with most modern browsers, the project was designed specifically to work on IE 10, as SharePoint's default masterpage still targets IE 10 with a meta tag.  
+Although your code will work with most modern browsers, the project was designed specifically to work on IE 11.
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sp-sveltejs/template.
 
