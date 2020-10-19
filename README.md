@@ -15,7 +15,7 @@ cd sp-svelte-app
 
 *Note that you will need to have [Node.js](https://nodejs.org) installed.*
 
-*Looking for a shareable component template the works with SharePoint? Coming Soon...*
+*Looking for a shareable component template the works with SharePoint? [sp-sveltejs/component-template](https://github.com/sp-sveltejs/component-template)
 
 ---
 
